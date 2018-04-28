@@ -20,8 +20,8 @@ Tests:
 
 <b>Playlists(object):</b>
 
-<i>Holds a record's list of playlist in which its enlisted</i>
+<i>Holds a record's list of playlists in which its enlisted</i>
 
-Tests:
+<u>Tests:</u>
 - Adding playlist - the record's list of playlists is updated with the new PL
 - Adding playlist - assert addition to the user's side-bar playlists list
