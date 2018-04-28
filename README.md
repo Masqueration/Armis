@@ -1,7 +1,7 @@
 # Armis
 In order to run the tests suite, run Armis.py with the URL and credentials as args.
 
-    python Armis.py URL USERNAME PASSWORD
+    python Armis.py -w URL -u USERNAME -p PASSWORD
     
 Specifically
 
