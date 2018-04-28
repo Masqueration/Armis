@@ -5,8 +5,8 @@ In order to run the tests suite, run Armis.py with the URL and credentials as ar
     
 Specifically
 
-    python Armis.py 'https://www.orfium.com/' 'Homework' 'Armis1234'
-    
+    python Armis.py -p "Armis1234" -w "https://www.orfium.com/" -u "Homework"
+
     
 <b>Login(object):</b>
 
