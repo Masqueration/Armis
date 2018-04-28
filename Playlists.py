@@ -45,13 +45,26 @@ class Playlists:
 
     def test_add_pl(self):
         """
-        Asserting a new playlist was added to a record's list of playlists
+        Asserting a new playlist was added
         """
+        side_bar_count = int(self.count_playlists())
         self.add_playlist()
         sleep(SLEEP)
         self.browser.find_element_by_link_text("Playlists").click()
         self.playlists_scrape()
+        # In record's list of playlists
         try:
             assert (self.id == self.playlists[-1])
         except AssertionError:
             raise AssertionError(self.id + ' Is not the newest playlist')
+        # In side bar's list of playlists
+        try:
+            assert (side_bar_count == int(self.count_playlists()) - 1)
+        except AssertionError:
+            raise AssertionError(self.id + ' Is not found in the side bar')
+
+    def count_playlists(self):
+        self.browser.maximize_window()
+        sleep(2)
+        pl_sidebar_xpath = '/html/body/div[2]/div[1]/div/aside[2]/div/div[1]/div[2]/div[2]'
+        return self.browser.find_element_by_xpath(pl_sidebar_xpath).get_attribute('childElementCount')

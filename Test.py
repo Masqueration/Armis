@@ -8,6 +8,7 @@ class Test:
     def __init__(self, page, user, password):
         self.browser = Chrome(executable_path='C:\Python27\selenium\webdriver\chrome\chromedriver')
         self.browser.get(page)
+        self.browser.get_window_rect()
         self.user = user
         self.password = password
 
