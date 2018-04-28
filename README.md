@@ -3,6 +3,10 @@ In order to run the tests suite, run Armis.py with the URL and credentials as ar
 
     python Armis.py URL USERNAME PASSWORD
     
+Specifically
+
+    python Armis.py 'https://www.orfium.com/' 'Homework' 'Armis1234'
+    
     
 <b>Login(object):</b>
 
